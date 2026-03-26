@@ -10,7 +10,7 @@ export function CustomEdge({
   targetPosition,
   style = {},
   markerEnd,
-  animated
+  animated,
 }: EdgeProps) {
   let edgePath = '';
 
@@ -48,12 +48,6 @@ export function CustomEdge({
   const edgeClasses = `react-flow__edge-path ${animated ? 'animated' : ''}`;
 
   return (
-    <BaseEdge 
-      id={id} 
-      path={edgePath} 
-      markerEnd={markerEnd} 
-      style={style} 
-      className={edgeClasses}
-    />
+    <BaseEdge id={id} path={edgePath} markerEnd={markerEnd} style={style} className={edgeClasses} />
   );
 }
