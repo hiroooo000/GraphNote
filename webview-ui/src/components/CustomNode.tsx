@@ -21,7 +21,8 @@ export function CustomNode({ data, selected }: NodeProps<CustomNodeType>) {
 
   return (
     <div className={`bg-white rounded-md shadow-sm border ${borderColor} ${selectedClass} min-w-[160px] transition-all duration-200`}>
-      <Handle type="target" position={Position.Top} className="w-2.5 h-2.5 bg-slate-400 border-white border-[1px]" />
+      <Handle type="source" position={Position.Top} id="top" className="w-2.5 h-2.5 bg-slate-400 border-white border-[1px]" />
+      <Handle type="source" position={Position.Left} id="left" className="w-2.5 h-2.5 bg-slate-400 border-white border-[1px]" />
       
       {/* Header */}
       <div className="flex items-center justify-between px-3 py-1.5 border-b border-slate-100 bg-slate-50/50 rounded-t-md">
@@ -49,7 +50,8 @@ export function CustomNode({ data, selected }: NodeProps<CustomNodeType>) {
         {data.label}
       </div>
 
-      <Handle type="source" position={Position.Bottom} className="w-2.5 h-2.5 bg-slate-400 border-white border-[1px]" />
+      <Handle type="source" position={Position.Bottom} id="bottom" className="w-2.5 h-2.5 bg-slate-400 border-white border-[1px]" />
+      <Handle type="source" position={Position.Right} id="right" className="w-2.5 h-2.5 bg-slate-400 border-white border-[1px]" />
     </div>
   );
 }
