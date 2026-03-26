@@ -102,7 +102,7 @@ function App() {
     [setEdges]
   );
 
-  const onNodeClick = useCallback((_event: React.MouseEvent, node: Node) => {
+  const onNodeDoubleClick = useCallback((_event: React.MouseEvent, node: Node) => {
     setSelectedNode(node as CustomNodeType);
   }, []);
 
@@ -115,7 +115,7 @@ function App() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
-        onNodeClick={onNodeClick}
+        onNodeDoubleClick={onNodeDoubleClick}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
         connectionMode={ConnectionMode.Loose}
