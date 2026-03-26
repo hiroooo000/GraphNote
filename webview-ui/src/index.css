@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  /* 最終的にVSCodeの背景色に追従。モック単体で開いた場合は白系のテーマ */
+  background-color: var(--vscode-editor-background, #f8fafc);
+  color: var(--vscode-editor-foreground, #334155);
+  font-family: var(--vscode-font-family, 'Inter', system-ui, sans-serif);
+}

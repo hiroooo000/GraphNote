@@ -24,18 +24,29 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "dev:ui": "cd webview-ui && pnpm run dev",
+    "lint": "eslint src --ext ts",
+    "typecheck": "tsc -p ./ --noEmit",
+    "format:check": "prettier --check 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.ts'",
+    "lint:ui": "cd webview-ui && pnpm run lint",
+    "typecheck:ui": "cd webview-ui && pnpm run typecheck",
+    "format:check:ui": "cd webview-ui && pnpm run format:check",
+    "format:ui": "cd webview-ui && pnpm run format",
+    "check": "pnpm run typecheck && pnpm run lint && pnpm run format:check && pnpm run typecheck:ui && pnpm run lint:ui && pnpm run format:check:ui"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "@vscode/test-cli": "^0.0.8",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.3.3"
   },
   "packageManager": "pnpm@8.15.5"
 }
