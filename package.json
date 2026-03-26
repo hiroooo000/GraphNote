@@ -24,7 +24,8 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "dev:ui": "cd webview-ui && pnpm run dev"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
