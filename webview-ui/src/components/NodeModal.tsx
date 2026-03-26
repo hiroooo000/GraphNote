@@ -1,4 +1,4 @@
-import { X, Play, Code, Terminal } from 'lucide-react';
+import { X, Play, Code, Terminal, FolderOpen, Pencil } from 'lucide-react';
 import { CustomNodeType } from './CustomNode';
 
 interface NodeModalProps {
@@ -22,10 +22,25 @@ export function NodeModal({ node, isOpen, onClose }: NodeModalProps) {
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-3 border-b border-slate-200 bg-slate-50">
           <div>
-            <h2 className="text-lg font-bold text-slate-800 flex items-center gap-2">
-              <span className="text-xl">🐍</span> {node.data.filename}
+            <h2 className="text-sm font-semibold text-slate-500 flex items-center gap-1.5">
+              <span>🐍</span>
+              {node.data.filename}
+              <button
+                className="ml-1 p-1 hover:bg-slate-200 rounded text-slate-400 hover:text-blue-600 transition-colors"
+                title="Open file"
+              >
+                <FolderOpen size={14} />
+              </button>
             </h2>
-            <p className="text-xs text-slate-500 font-medium ml-7">{node.data.label}</p>
+            <p className="text-base font-bold text-slate-800 ml-6 flex items-center gap-1.5">
+              {node.data.label}
+              <button
+                className="p-0.5 hover:bg-slate-200 rounded text-slate-400 hover:text-blue-600 transition-colors"
+                title="Edit title"
+              >
+                <Pencil size={13} />
+              </button>
+            </p>
           </div>
           <button
             onClick={onClose}
