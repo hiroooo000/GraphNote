@@ -1,17 +1,5 @@
 import React from 'react';
-import {
-  Save,
-  Plus,
-  Scissors,
-  Copy,
-  ClipboardPaste,
-  Play,
-  Square,
-  RotateCw,
-  FastForward,
-  Bug,
-  ExternalLink,
-} from 'lucide-react';
+import { Save, Plus, Scissors, Copy, ClipboardPaste, Play, Square, RotateCw, FastForward } from 'lucide-react';
 
 export function Toolbar() {
   return (
@@ -52,10 +40,6 @@ export function Toolbar() {
 
       {/* Right Group */}
       <div className="flex items-center gap-4 text-[13px] font-medium text-slate-600">
-        <button className="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
-          JupyterLab <ExternalLink size={14} />
-        </button>
-        <ToolbarButton icon={<Bug size={16} strokeWidth={2.5} />} label="Debugger" />
         <div className="flex items-center gap-2 cursor-pointer hover:bg-slate-200 px-2 py-1 rounded transition-colors">
           <span>Python 3 (ipykernel)</span>
           <div
